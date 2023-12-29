@@ -1,0 +1,341 @@
+body {
+    font-size: 1.2em;
+}
+
+@font-face {
+    font-family: Afacad;
+    src: url(../fonts/Afacad-Regular.ttf);
+}
+
+@font-face {
+    font-family: AfacadSemiBold;
+    src: url(../fonts/Afacad-SemiBold.ttf);
+    font-weight: bold;
+}
+
+header {
+    background: url(../img/rudraksha-banner-bg.webp) center;
+    background-size: cover;
+    text-shadow: 0px 0px 70px black;
+    z-index: 1;
+}
+
+header a {
+    padding: 0 30px;
+}
+
+body {
+    line-height: 1.5;
+    margin: 0;
+    background: #F2E9E2;
+    color: #695F56;
+    font-family: Afacad, sans-serif;
+}
+
+b {
+    font-family: AfacadSemiBold;
+}
+
+.w-1000 {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.top-20 {
+    top: 20px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+a {
+    color: #ee4d2d;
+    text-decoration: none;
+}
+
+.font-96 {
+    font-size: 250px;
+    line-height: 0.7;
+    font-family: Allison;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pr-15 {
+    padding-right: 15px;
+}
+
+.pr-30 {
+    padding-right: 30px;
+}
+
+.pr-60 {
+    padding-right: 60px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.pl-30 {
+    padding-left: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+a:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.categories {
+    min-width: 1000px;
+}
+
+.categories a {
+    width: 12.4%;
+    height: 130px;
+    display: inline-block;
+    margin: 0.05%;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.category {
+    height: 100%;
+}
+
+.category p {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(105, 95, 86);
+    background-color: rgba(105, 95, 86, 0.9);
+    overflow: scroll;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 7px;
+    font-size: 40px;
+    line-height: 0.5;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.uppercase .overlay-content a span a {
+    text-transform: none;
+}
+
+.submenu-img {
+    width: 18px;
+}
+
+header .justify-between {
+    padding: 0 15px;
+}
+
+#mainNav .closebtn {
+    left: 8px;
+}
+
+#subNav .closebtn {
+    right: 4px;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.primary-btn {
+    background: #ee4d2d;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .font-96 {
+        font-size: 70px;
+    }
+
+    .pb-100 {
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    header.pt-30 {
+        padding-top: 0;
+    }
+
+    header .justify-between {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .justify-center {
+        padding-top: 60px;
+    }
+
+    .darkHeader {
+        background: #F2E9E2;
+    }
+
+    .font-96 {
+        font-size: 80px;
+    }
+
+    .logo {
+        width: 150px;
+        vertical-align: middle;
+    }
+
+    .pb-100 {
+        padding-bottom: 40px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .primary-btn {
+        padding: 5px 15px;
+        margin: 0 15px 0 0;
+    }
+
+    header a {
+        padding: 0 15px;
+    }
+
+    header .justify-between {
+        padding: 10px 15px;
+    }
+
+    .top-20 {
+        top: 0;
+    }
+}
+
+@media screen and (max-width:600px) {}
