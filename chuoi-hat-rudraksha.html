@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hạt Rudraksha Kim Cang - Biểu tượng kết nối tâm hồn và mang lại sức khỏe, sự bảo vệ, cùng năng lượng tích cực mà chúng luôn mang đến cho người đeo.">
+    <title>Hạt Kim Cang Rudraksha là gì? 6 Lợi ích tuyệt vời khi đeo nó</title>
+    <link rel="icon" type="image/png" href="img/favicon.svg">
+    <meta property="og:image" content="img/share.webp">
+    <link rel="stylesheet" href="css/top.css">
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex justify-center pos-rel">
+            <div class="d-flex justify-between pos-abs w-100 top-20" id="menus">
+                <div class="d-flex align-items-center">
+                    <a href="/"><img src="img/rudraksha-logo.svg" class="logo"></a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a href="https://fb.com/rudraksha.vn" target="_blank" class="primary-btn">Mua ngay</a>
+                </div>
+            </div>
+            <div id="subNav">
+            </div>
+        </div>
+    </header>
+
+    <section class="container pr-15 pl-15">
+        <p><a href="/">Trang chủ</a> > Chuỗi hạt Kim Cang Rudraksha</p>
+        <h1 class="orange">Chuỗi hạt Kim Cang Bồ Đề, Vòng Rudraksha 108 hạt đã Thánh Hiến</h1>
+        <div class="d-flex flex-wrap">
+            <div class="w-33">
+                <div class="pos-rel">
+                    <img src="img/chuoi-hat-deo-co-rudraksha-5-canh.webp" class="slide w-100">
+                    <img src="img/chuoi-hat-rudraksha.webp" class="slide w-100">
+                    <img src="img/chuoi-rudraksha.webp" class="slide w-100">
+
+                    <a class="prev pos-abs" onclick="plusSlide(-1)">
+                        <img src="img/prev.svg">
+                    </a>
+                    <a class="next pos-abs" onclick="plusSlide(1)">
+                        <img src="img/next.svg">
+                    </a>
+                </div>
+
+                <div class="d-flex">
+                    <div class="w-33 mr-10 ml-10 mt-20">
+                        <img src="img/chuoi-hat-deo-co-rudraksha-5-canh.webp" class="w-100 thumbnail"
+                            onclick="currentSlide(1)">
+                    </div>
+                    <div class="w-33 mr-10 ml-10 mt-20">
+                        <img src="img/chuoi-hat-rudraksha.webp" class="w-100 thumbnail" onclick="currentSlide(2)">
+                    </div>
+                    <div class="w-33 mr-10 ml-10 mt-20">
+                        <img src="img/chuoi-rudraksha.webp" class="w-100 thumbnail" onclick="currentSlide(3)">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlide(slideIndex);
+
+                function plusSlide(n) {
+                    showSlide(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlide(slideIndex = n);
+                }
+
+                function showSlide(n) {
+                    let i;
+                    let slides = document.getElementsByClassName('slide');
+                    let thumbnails = document.getElementsByClassName('thumbnail');
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = 'none';
+                    }
+                    for (i = 0; i < thumbnails.length; i++) {
+                        thumbnails[i].className = thumbnails[i].className.replace(' active', '');
+                    }
+                    slides[slideIndex - 1].style.display = 'block';
+                    thumbnails[slideIndex - 1].className += ' active';
+                }
+            </script>
+
+            <div class="w-33 pl-15">
+                <p class="m-0 pl-15">Giá: <b><span class="font-15 orange" id="new-price">290,000₫</span></b> <span
+                        class="line-through" id="old-price">350,000</span> <span class="orange"
+                        id="reduced-percentage">-18%</span></p>
+                <div class="d-flex pl-15 align-items-center flex-wrap">
+                    <p>Kích thước: </p>
+                    <button type="button" class="pos-rel size-btn mr-10 ml-10" id="size-btn1"
+                        onclick="changePrice6()">6mm</button>
+                    <button type="button" class="pos-rel size-btn mr-10" id="size-btn2"
+                        onclick="changePrice7()">7mm</button>
+                    <button type="button" class="pos-rel size-btn mr-10 active" id="size-btn3"
+                        onclick="changePrice8()">8mm</button>
+                </div>
+                <script>
+                    let newPrice = document.getElementById('new-price');
+                    let oldPrice = document.getElementById('old-price');
+                    let reducedPercentage = document.getElementById('reduced-percentage');
+
+
+                    let sizeBtn1 = document.getElementById("size-btn1");
+                    let sizeBtn2 = document.getElementById("size-btn2");
+                    let sizeBtn3 = document.getElementById("size-btn3");
+
+
+                    function changePrice6() {
+
+                        newPrice.innerHTML = "680,000";
+                        oldPrice.innerHTML = "800,000";
+                        reducedPercentage.innerHTML = "-15%";
+
+
+                        sizeBtn1.classList.add("active");
+                        sizeBtn2.classList.remove("active");
+                        sizeBtn3.classList.remove("active");
+
+                    }
+
+                    function changePrice7() {
+
+                        newPrice.innerHTML = "550,000";
+                        oldPrice.innerHTML = "700,000";
+                        reducedPercentage.innerHTML = "-22%";
+
+
+                        sizeBtn2.classList.add("active");
+                        sizeBtn1.classList.remove("active");
+                        sizeBtn3.classList.remove("active");
+
+                    }
+
+                    function changePrice8() {
+
+                        newPrice.innerHTML = "290,000";
+                        oldPrice.innerHTML = "350,000";
+                        reducedPercentage.innerHTML = "-18%";
+
+
+                        sizeBtn3.classList.add("active");
+                        sizeBtn2.classList.remove("active");
+                        sizeBtn1.classList.remove("active");
+
+                    }
+                </script>
+                <ul>
+                    <li>Chuỗi hạt Kim Cang Rudraksha đã Thánh Hiến được hưởng tất cả những năng lượng tích cực nhất
+                        tại Dhyanalinga - Đền năng lượng thiền ở Ấn Độ, bất cứ tôn giáo nào cũng có thể dùng.</li>
+                    <li>Chuỗi Rudraksha Mala hỗ trợ người đeo đạt được trạng thái thiền định & an lạc sâu hơn.</li>
+                    <li>Tạo cho bạn một cái kén năng lượng bao bọc xung quanh, bảo vệ bạn khỏi những năng lượng tiêu cực
+                        từ bên ngoài.</li>
+                    <li>Hạt Rudraksha, chứa lượng carbon, hydro, nitơ và oxy, mang lại những lợi ích sức khỏe không ngờ.
+                        Các thành phần này có tác dụng chữa lành tâm trí, giảm bệnh tim, hạ huyết áp và nâng cao nhận
+                        thức.</li>
+                    <li>Đặc biệt, hạt Rudraksha giúp cân bằng nhiệt lượng trong cơ thể, tạo cảm giác mát mẻ và thoải mái
+                        cho người đeo.</li>
+                    <li>Hạt Rudraksha 5 khía hỗ trợ kích thích tinh thần lạc quan và tăng cường quyết tâm.</li>
+                    <li>Tất cả hạt Kim Cang đều phải chờ hạt chín tự rụng, do vậy hạt nhỏ sẽ hiếm hơn nên giá thành cao
+                        hơn, còn về mặt năng lượng thì chúng như nhau.</li>
+                    <li>Loại: Chuỗi hạt Kim Cang 5 khía.</li>
+                    <li>Xuất xứ: Nhập khẩu Ấn Độ.</li>
+                </ul>
+            </div>
+            <div class="w-33 pl-30">
+                <div class="white-bg border">
+                    <img src="img/cam-ket.svg" class="w-100">
+                    <p class="font-15 orange text-center m-0 mt-10"><b>Rudraksha.vn CAM KẾT</b></p>
+                    <ul>
+                        <li>An toàn cho người dùng</li>
+                        <li>Hàng chính hãng nhập trực tiếp từ Ấn Độ</li>
+                        <li>Sản phẩm thân thiện môi trường</li>
+                        <li>Hỗ trợ phí ship 30k cho đơn từ 500k</li>
+                        <li>Đổi trong vòng 07 ngày (hàng còn nguyên và chưa sử dụng)</li>
+                    </ul>
+                </div>
+
+                <a class="primary-btn w-100 d-block text-center mt-30 mb-15" href="tel:+84988468833">Hotline 098 846
+                    8833</a>
+                <a href="https://fb.com/rudraksha.vn" target="_blank" class="w-33"><img src="img/facebook-w100.svg"
+                            class="w-100"></a>
+                <!-- <div class="d-flex align-items-center justify-center">
+                    <a href="https://fb.com/rudraksha.vn" target="_blank" class="w-33"><img src="img/facebook.svg"
+                            class="w-100"></a>
+                    <a href="#" target="_blank" class="w-33"><img src="img/lazada.webp" class="w-100"></a>
+                    <a href="#" target="_blank" class="w-33"><img src="img/shopee.webp" class="w-100"></a>
+                </div> -->
+            </div>
+        </div>
+        <div class="mt-30">
+            <div class="tabs">
+                <button class="tab-link font-11" onclick="openTab(event, 'mo-ta')" id="default-open">Mô tả</button>
+                <button class="tab-link font-11" onclick="openTab(event, 'nhan-xet')">Nhận xét khách hàng</button>
+            </div>
+
+            <div id="mo-ta" class="tab-content">
+                <h2>Rudraksha 108 hạt đã Thánh Hiến là gì ?</h2>
+                <p>Thánh hiến là một quá trình làm gia tăng năng lượng tích cực và sự thiêng liêng của một vật, là một
+                    phần quan trọng của truyền thống tâm linh ở Ấn Độ và khi áp dụng cho hạt Rudraksha, nó làm tăng giá
+                    trị tâm linh và phong thủy của hạt, khiến chúng trở nên đặc biệt mạnh mẽ, nhất là khi quá trình
+                    Thánh hiến còn được thực hiện tại Đền năng lượng thiền Dhyanalinga.</p><br>
+                <h2>6 Ưu điểm đặc biệt mà Vòng Rudraksha 108 hạt đã Thánh Hiến mang lại</h2>
+                <h3>1. Làm sạch năng lượng xung quanh bạn</h3>
+                <p>Hạt Kim Cang được cho là loại bỏ năng lượng tiêu cực và tăng cường năng lượng tích cực trong bản
+                    thân và môi trường sống. Bảo vệ bạn khỏi các luồng năng lượng tối giúp người đeo duy trì
+                    một trạng thái năng lượng ổn định và cân bằng.</p>
+                <img src="img/tang-cuong-nang-luong-tich-cuc.webp" class="hinh-mo-ta m-auto d-block">
+                <h3>2. Bảo vệ bạn khỏi sự khắc nghiệt của chuyến đi xa</h3>
+                <p>Bạn có để ý khi phải đi xa bằng những phương tiện đi lại, cơ thể thường mệt mỏi dù bạn không hề vận
+                    động? Đó là do trường năng lượng bao quanh bạn bị bào mòn do phải di chuyển với tốc độ cao.</p>
+                <p>Đeo chuỗi hạt Rudraksha sẽ giúp hạn chế sự bào mòn này, bảo vệ và giữ chặt năng lượng tích cực cho
+                    người đeo nó.</p>
+                <h3>3. Không bị năng lượng tiêu cực từ nơi khác tác động</h3>
+                <p>Khi bạn đến những nơi xa lạ bạn thường rất khó đi vào giấc ngủ dù đã rất mệt mỏi? Đó là do trường
+                    năng lượng tại nơi đó không tương thích với bạn hoặc có ảnh hưởng xấu tới bạn. Chuỗi hạt Kim Cang
+                    được cho là có khả năng tạo ra một kén năng lượng bao bọc, bảo vệ người đeo khỏi năng lượng tiêu cực
+                    và ảnh hưởng xấu từ môi trường xung quanh.</p>
+                <h3>4. Kiểm tra thức ăn và nước uống không lành mạnh</h3>
+                <p>Bạn có thể sử dụng hạt Kim Cang để kiểm tra năng lượng tốt hay xấu trong thực phẩm bằng cách
+                    cầm chuỗi hạt Rudraksha để gần phía trên, nếu thực phẩm có năng lượng tích cực với cơ thể bạn nó sẽ
+                    quay theo chiều thuận kim đồng hồ, ngược lại nếu thực phẩm có năng lượng tiêu cực tới cơ thể nó sẽ
+                    quay ngược chiều kim đồng hồ.</p>
+                <h3>5. Cải thiện sức khỏe thể chất</h3>
+                <p>Giảm Stress và lo âu: Hạt Kim Cang được cho là có khả năng giảm stress và lo âu, giúp người đeo duy
+                    trì tâm trạng tích cực.</p>
+                <p>Điều hòa huyết áp: Một số người tin rằng vòng hạt Kim Cang có thể giúp điều hòa huyết áp và cải
+                    thiện sức khỏe tim mạch.</p>
+                <h3>6. Giúp bạn có bước tiến lớn trong việc khai phá tiềm thức bản thân</h3>
+                <p>Hạt Rudraksha được coi là một công cụ để tăng cường năng lượng của người đeo, giúp khả năng tập
+                    trung, ý thức và kết nối với tầng cao hơn của bản thân. Đó là lý do các Yogi, các thiền sinh hướng
+                    tới phát triển tâm linh đều rất hay dùng chuỗi Kim Cang Rudraksha.</p>
+                <p>Chuỗi hạt Kim Cang không chỉ là một sản phẩm trang sức,mà còn là công cụ hỗ trợ giúp cân bằng
+                    và phát triển năng lượng tuyệt vời hòa quyện giữa giá trị tinh thần, sức khỏe và thời trang.</p><br>
+                <h2>Cách đeo chuỗi hạt Rudraksha Mala</h2>
+                <p>Chuỗi này đã được truyền năng lượng và được thiết kế có thể đeo ở cổ. Trong những ngày đầu, có thể
+                    bạn sẽ thấy vướng vướng. Sau đó, chuỗi sẽ tương thích với bạn và trở thành một phần của bạn, đeo
+                    được thường xuyên thì càng tốt.</p>
+                <img src="img/chuoi-rudraksha.webp" class="hinh-mo-ta m-auto d-block">
+                <p>Các hạt Kim Cang bị trôi màu đỏ (do được tẩm đất đỏ để “nạp thổ”) và sau một thời gian sẽ trở về màu
+                    nâu đen tự nhiên của hạt.</p>
+                <p>Khi không đeo nữa, bạn để lại vào túi vải màu trắng làm từ vải tự nhiên không nhuộm để bảo toàn năng
+                    lượng.</p>
+                <p>Hạt Kim Cang kỵ nước nóng và xà phòng hóa chất, nên tốt nhất khi tắm bạn nên tháo ra.</p>
+                <p>Chùm tua rua màu vàng phía dưới nếu không thích thì bạn tháo ra, rút cọng dây quấn rồi rút các sợi
+                    tua rua là ra (đừng cắt nha). Với phần dây thừa ra, bạn cắt ngắn lại rồi hơ lửa cho nó không bị tưa.
+                </p>
+                <p>Nếu có hạt bị vỡ, bạn có thể tháo ra miễn sao trong chuỗi còn trên 84 hạt là được. Lưu ý: Khi thêm
+                    hạt bất kỳ thì hạt buộc nhô ra phải là hạt chốt.</p>
+                <p>Hãy làm cho việc đeo hạt Rudraksha trở thành một phần tự nhiên của cuộc sống hàng ngày của bạn. Đeo
+                    chúng khi bạn đi làm, khi đi thiền hoặc trong bất kỳ tình huống nào bạn cảm thấy thoải mái và hài
+                    lòng.</p><br>
+                <h2>Bảo Quản Chuỗi Hạt Rudraksha</h2>
+                <h3>Tránh Tiếp Xúc Với Nước</h3>
+                <p>Hạt Rudraksha thường không nên tiếp xúc với nước quá nhiều, đặc biệt là nước mặn, nước nóng. Tránh
+                    đeo khi bạn tắm, bơi lội hoặc khi bạn có thể tiếp xúc với nước.</p>
+                <p>Hạt Rudraksha có khả năng hấp thụ nước. Khi chúng hấp thụ nước, chúng có thể trở nên mềm mại và mất
+                    hình dạng tự nhiên của chúng. Đối với một số người tin tưởng, việc này có thể làm mất tính linh
+                    thiêng của hạt.</p>
+                <img src="img/nuoc.webp" class="hinh-mo-ta m-auto d-block">
+                <h3>Tránh Tiếp Xúc Trực Tiếp với Nhiệt Độ Cao</h3>
+                <p>Không nên để hạt Rudraksha trực tiếp dưới ánh nắng mặt trời hoặc gần nguồn nhiệt độ cao như lò nướng,
+                    bếp, hoặc các thiết bị tạo nhiệt khác. Vì hạt sẽ bị mất màu sắc và nhanh chóng bị mài mòn.</p>
+                <h3>Tránh Tiếp Xúc Với Kim Loại Và Xi-măng</h3>
+                <p>Không nên để hạt Rudraksha tiếp xúc với các hộp đựng bằng kim loại, hoặc để dưới nền xi-măng.</p>
+                <h3>Làm Sạch Nhẹ</h3>
+                <p>Nếu hạt bị bẩn, bạn có thể lau nhẹ chúng bằng một khăn mềm được ướt nhẹ. Không sử dụng các chất tẩy
+                    rửa mạnh hoặc hóa chất.</p>
+                <h3>Ngâm chuỗi hạt mỗi 6 tháng một lần trong bơ ghee và sữa nguyên kem (Tùy Chọn)</h3>
+                <p>Việc ngâm bảo dưỡng chuỗi Kim Cang không liên quan gì đến năng lượng trong chuỗi mà chỉ giúp chuỗi
+                    lâu hư hơn. Tuy nhiên theo kinh nghiệm của nhiều người khi ngâm bảo quản chuỗi sẽ có mùi hơi khó
+                    chịu. Vì vậy, bạn ngâm cũng được, không ngâm cũng được.</p>
+                <h3>Kiểm Tra Định Kỳ</h3>
+                <p>Kiểm tra định kỳ hạt Rudraksha để đảm bảo rằng chúng không bị nứt, gãy hoặc mất những hạt. Nếu phát
+                    hiện vấn đề, hãy sửa chữa hoặc thay thế ngay lập tức.</p><br>
+                <h2>Lưu ý khi đeo hạt chuỗi hạt Rudraksha</h2>
+                <p>Việc bảo quản và giữ gìn nó đặc biệt quan trọng để duy trì năng lượng tích cực và ý nghĩa của nó.
+                    Dưới đây là những lưu ý cần nhớ:</p>
+                <h3>Không Nên Cho Người Khác Mượn Trong Thời Gian Đầu</h3>
+                <p>Khi bạn mới sử dụng chuỗi hạt Rudraksha, năng lượng của nó đang trong quá trình ổn định. Do đó, tránh
+                    cho người khác mượn hoặc giữ chuỗi trong thời gian này để không làm gián đoạn quá trình điều chỉnh
+                    năng lượng.</p>
+                <h3>Chỉ Nên Đặt Ở Những Nơi Sạch Sẽ</h3>
+                <p>Để giữ cho năng lượng của chuỗi hạt không bị giảm giá trị, hạn chế đặt vòng cầm tay ở những nơi không
+                    sạch sẽ hoặc bẩn thỉu. Môi trường sạch sẽ sẽ giúp chuỗi hạt giữ được tính tinh khiết.</p>
+                <img src="img/dat-o-noi-sach-se.webp" class="hinh-mo-ta m-auto d-block">
+                <h3>Chôn Vào Đất Khi Không Dùng Nữa</h3>
+                <p>Sau một thời gia sử dụng nếu chuỗi đã cũ và bị hư nhiều hạt, bạn không có nhu cầu sử dụng nữa thì hãy
+                    chôn chuỗi xuống đất.</p>
+                <p>Những lưu ý trên không chỉ giúp bảo quản chuỗi hạt Rudraksha một cách đúng cách mà còn tôn trọng giá
+                    trị của nó. Hãy giữ cho chuỗi luôn sạch sẽ và truyền năng lượng tích cực trong hành trình tìm kiếm
+                    bình an.</p>
+
+            </div>
+
+            <div id="nhan-xet" class="tab-content">
+                <div class="d-flex flex-wrap mt-30">
+                    <div class="w-50 pr-30 pl-30">
+                        <div class="d-flex justify-between align-items-center flex-wrap">
+                            <p class="mb-0 font-11 mt-0"><b>Ankit Jala</b></p>
+                            <p class="mb-0 opacity-05 mt-0">28/12/2023</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                        </div>
+                        <p class="mt-0">Tuyệt vời. Chất lượng rất tốt. Tôi đeo nó hàng ngày khi thực hiện nitya upasana và cảm nhận sự ân sủng và tĩnh lặng bên trong.</p>
+                    </div>
+                    <div class="w-50 pr-30 pl-30">
+                        <div class="d-flex justify-between align-items-center flex-wrap">
+                            <p class="mb-0 font-11 mt-0"><b>Sanjay Kanzariya</b></p>
+                            <p class="mb-0 opacity-05 mt-0">27/12/2023</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                        </div>
+                        <p class="mt-0">Rudraksha làm tôi phản xạ năng lượng của Shiva. May mắn vì được ơn của Adiyogi mỗi khoảnh khắc trong cuộc sống của tôi ♥️</p>
+                    </div>
+                    <div class="w-50 pr-30 pl-30">
+                        <div class="d-flex justify-between align-items-center flex-wrap">
+                            <p class="mb-0 font-11 mt-0"><b>Sudheer Jallipalli</b></p>
+                            <p class="mb-0 opacity-05 mt-0">04/11/2023</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                        </div>
+                        <p class="mt-0">Từ ngày đầu tiên tôi bắt đầu đeo nó, tất cả những cơn ác mộng, nỗi sợ, và lo lắng đều biến mất..!! Tôi cảm thấy rất tích cực, bình tĩnh và thư giãn suốt thời gian..! Những ngày này, tôi không còn tức giận dễ dàng như trước nữa.</p>
+                    </div>
+                    <div class="w-50 pr-30 pl-30">
+                        <div class="d-flex justify-between align-items-center flex-wrap">
+                            <p class="mb-0 font-11 mt-0"><b>Prateek Singh</b></p>
+                            <p class="mb-0 opacity-05 mt-0">30/10/2023</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                        </div>
+                        <p class="mt-0">Namaskaram,
+                            Tôi đã nhận được chuỗi hạt Rudraksha từ Isha cách đây một tháng. Tôi đang đeo nó thường xuyên. Tôi cảm thấy bình tĩnh hơn so với trước đây. Cảm giác như Rudraksha mang lại cho tôi một không khí tích cực và sức mạnh khổng lồ... Đã hoàn toàn đáp ứng đúng những kỳ vọng của tôi. Cảm ơn Sadhguru.</p>
+                    </div>
+                    <div class="w-50 pr-30 pl-30">
+                        <div class="d-flex justify-between align-items-center flex-wrap">
+                            <p class="mb-0 font-11 mt-0"><b>Veeramani Lakshmanan</b></p>
+                            <p class="mb-0 opacity-05 mt-0">13/10/2023</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                        </div>
+                        <p class="mt-0">Một thứ không thể thiếu! Tôi đã đeo nó từ 3 năm trước và nó luôn là người bạn đồng hành không thay đổi của tôi. Cảm ơn Isha Life và Sadhguru vì món quà tuyệt vời này.</p>
+                    </div>
+                    <div class="w-50 pr-30 pl-30">
+                        <div class="d-flex justify-between align-items-center flex-wrap">
+                            <p class="mb-0 font-11 mt-0"><b>Guram Zhgamadze</b></p>
+                            <p class="mb-0 opacity-05 mt-0">05/10/2023</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                            <img src="img/star.svg" class="w-20">
+                        </div>
+                        <p class="mt-0">Tôi đã mua cái này cho anh trai và khuôn mặt anh ấy bắt đầu tỏa sáng chỉ trong vài giờ. Trong trường hợp của tôi, khuôn mặt không tỏa sáng, nhưng cảm giác khi đeo nó thật sự tốt. Hãy đảm bảo không ai chạm vào hạt Rudraksha của bạn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function openTab(evt, cityName) {
+                    var i, tablinks, tabcontents;
+
+                    tabcontents = document.getElementsByClassName('tab-content');
+                    for (i = 0; i < tabcontents.length; i++) {
+                        tabcontents[i].style.display = 'none';
+                    }
+
+                    tablinks = document.getElementsByClassName('tab-link');
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(' active', '');
+                    }
+
+                    document.getElementById(cityName).style.display = 'block';
+                    evt.currentTarget.className += ' active';
+                }
+
+                document.getElementById('default-open').click();
+            </script>
+        </div>
+    </section>
+
+    <footer class="pt-30">
+        <div class="light-bg">
+            <img src="img/white-rudraksha-logo.svg">
+            <p class="mt-0 max-width-600 m-auto mb-30">Rudraksha.vn là nơi nhập khẩu trực tiếp chuỗi vòng hạt Kim Cang
+                Rudraksha từ Ấn Độ, 100% hạt thiên nhiên. Liên hệ ngay 0988.46.88.33 để đặt mua hoặc mua trực tiếp tại
+                các trang TMĐT của chúng tôi bên dưới:</p>
+            <div class="d-flex align-items-center justify-center">
+                <a href="https://fb.com/rudraksha.vn" target="_blank"><img src="img/facebook.svg"
+                        class="max-width-100"></a>
+                <!-- <a href="https://www.facebook.com/bancha.vn" target="_blank"><img src="img/bancha-group.svg"></a> 
+                <a href="https://www.lazada.vn/shop/bancha-vn" target="_blank"><img src="img/lazada.webp" class="max-width-100"></a>
+                <a href="https://shopee.vn/bancha.vn" target="_blank"><img src="img/shopee.webp" class="max-width-100"></a>-->
+            </div>
+        </div>
+        <p>©rudraksha.vn 2023</p>
+    </footer>
+    <button id="toTop"><img src="img/back-to-top.svg"></button>
+    <div class="contacts">
+        <button id="contact" class="pos-fixed"><img src="img/contact.svg"></button>
+        <div id="zalo-mess" class="pos-fixed">
+            <a href="https://zalo.me/84988468833" id="zalo"><img src="img/zalo.svg"></a>
+            <a href="https://m.me/rudraksha.vn" id="messenger" target="_blank"><img src="img/messenger.svg"></a>
+            <a id="phone" href="tel:+84988468833"><img src="img/phone.svg"></a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

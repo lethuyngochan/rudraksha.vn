@@ -32,8 +32,32 @@
     width: 20px;
 }
 
+.mr-10 {
+    margin-right: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-30 {
+    margin-left: 30px;
+}
+
 .mt-0 {
     margin-top: 0;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-30 {
+    margin-top: 30px;
 }
 
 .mt-50 {
@@ -50,6 +74,10 @@
     margin-top: 0;
 }
 
+.p-30 {
+    padding: 30px;
+}
+
 .pl-60 {
     padding-left: 60px;
 }
@@ -59,6 +87,22 @@
 }
 
 .content {
+    width: 50%;
+}
+
+.w-20 {
+    width: 20px;
+}
+
+.w-33 {
+    width: 33.33%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-50 {
     width: 50%;
 }
 
@@ -113,6 +157,10 @@ footer {
     background-size: cover;
     padding: 30px;
     color: white;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
 }
 
 .mb-60 {
@@ -190,6 +238,10 @@ button:hover {
     animation-duration: 0.5s;
 }
 
+.white-bg {
+    background: white;
+}
+
 @keyframes slideIn {
     from {
         bottom: 70px;
@@ -219,6 +271,80 @@ button:hover {
     margin-right: auto;
 }
 
+.m-0 {
+    margin: 0;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.orange {
+    color: #ee4d2d;
+}
+
+.border {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    overflow: hidden;
+    border-bottom: 1px solid #E4DBD4;
+    min-width: 280px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-link {
+    color: #695F56;
+    font-family: Afacad, sans-serif;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.tab-link.active {
+    opacity: 1;
+    border-bottom: 4px solid #ee4d2d;
+}
+
+.size-btn {
+    border: 1px solid #695F56;
+    background: white;
+    height: 30px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #695F56;
+}
+
+.size-btn.active {
+    color: #ee4d2d;
+    border: 1px solid #ee4d2d;
+    transition: 0.5s;
+}
+
+.size-btn.active::after {
+    content: url(../img/tick.svg);
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.opacity-05 {
+    opacity: 0.5;
+}
+
+.image-center {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.hinh-mo-ta {
+    max-width: 50%;
+    max-height: 450px;
+}
+
 @media screen and (max-width:992px) {
     .pl-60 {
         padding-left: 40px;
@@ -230,6 +356,17 @@ button:hover {
 
     .mb-60 {
         margin-bottom: 30px;
+    }
+
+    .w-33 {
+        width: 100%;
+    }
+
+    .w-33.pl-15,
+    .w-33.pl-15 .m-0.pl-15,
+    .d-flex.pl-15.align-items-center.flex-wrap,
+    .w-33.pl-30 {
+        padding-left: 0;
     }
 }
 
@@ -258,5 +395,13 @@ button:hover {
         width: 100%;
         position: relative;
         top: 10px;
+    }
+
+    #nhan-xet .w-50 {
+        width: 100%;
+    }
+
+    .hinh-mo-ta {
+        max-width: 100%;
     }
 }

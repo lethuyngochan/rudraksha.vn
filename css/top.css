@@ -1,5 +1,5 @@
 body {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 @font-face {
@@ -14,14 +14,14 @@ body {
 }
 
 header {
-    background: url(../img/rudraksha-banner-bg.webp) center;
-    background-size: cover;
     text-shadow: 0px 0px 70px black;
     z-index: 1;
+    min-height: 60px;
 }
 
-header a {
-    padding: 0 30px;
+.home-header {
+    background: url(../img/rudraksha-banner-bg.webp) center;
+    background-size: cover;
 }
 
 body {
@@ -62,6 +62,14 @@ a {
     text-decoration: none;
 }
 
+.font-11 {
+    font-size: 1.1em;
+}
+
+.font-15 {
+    font-size: 1.5em;
+}
+
 .font-96 {
     font-size: 250px;
     line-height: 0.7;
@@ -79,6 +87,10 @@ a {
 .container {
     max-width: 1300px;
     margin: auto;
+}
+
+.pt-15 {
+    padding-top: 15px;
 }
 
 .pt-30 {
@@ -254,9 +266,52 @@ header .justify-between {
 
 .primary-btn {
     background: #ee4d2d;
-    padding: 10px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
     color: white;
+    text-wrap: nowrap;
+}
+
+.slide {
+    display: none;
+}
+
+.prev, .next {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+.next {
+    right: 0;
+}
+
+.thumbnail {
+    opacity: 0.5;
+}
+
+.prev:hover, .next:hover, .thumbnail:hover, .thumbnail.active {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.orange-bg {
+    background: #ee4d2d;
+}
+
+.white {
+    color: white;
+}
+
+.d-block {
+    display: block;
+}
+
+.slide.w-100 {
+    max-width: 500px;
+    margin: 0 0 0 50%;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-height: 450px) {
@@ -282,6 +337,10 @@ header .justify-between {
 }
 
 @media screen and (max-width:767px) {
+    header.home-header a {
+        padding: 0 30px;
+    }
+
     .mobile-menu {
         display: block;
     }
@@ -301,6 +360,7 @@ header .justify-between {
 
     .darkHeader {
         background: #F2E9E2;
+        z-index: 1;
     }
 
     .font-96 {
