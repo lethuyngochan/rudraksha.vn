@@ -345,6 +345,12 @@ button:hover {
     max-height: 450px;
 }
 
+.content-menu a.primary-btn,
+.content-menu a.w-100 {
+    color: white;
+    opacity: 1;
+}
+
 @media screen and (max-width:992px) {
     .pl-60 {
         padding-left: 40px;
@@ -364,7 +370,6 @@ button:hover {
 
     .w-33.pl-15,
     .w-33.pl-15 .m-0.pl-15,
-    .d-flex.pl-15.align-items-center.flex-wrap,
     .w-33.pl-30 {
         padding-left: 0;
     }

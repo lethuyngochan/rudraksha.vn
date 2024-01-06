@@ -223,7 +223,7 @@ html {
 
 .overlay .closebtn {
     position: absolute;
-    top: 7px;
+    top: 25px;
     font-size: 40px;
     line-height: 0.5;
 }
@@ -249,11 +249,11 @@ header .justify-between {
 }
 
 #mainNav .closebtn {
-    left: 8px;
+    left: 3px;
 }
 
 #subNav .closebtn {
-    right: 4px;
+    right: 0;
 }
 
 .overflow-scroll {
@@ -338,7 +338,7 @@ header .justify-between {
 
 @media screen and (max-width:767px) {
     header.home-header a {
-        padding: 0 30px;
+        padding: 0 15px;
     }
 
     .mobile-menu {
