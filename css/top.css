@@ -28,7 +28,7 @@ body {
     line-height: 1.5;
     margin: 0;
     background: #F2E9E2;
-    color: #695F56;
+    color: rgba(63, 49, 48, 0.7);
     font-family: Afacad, sans-serif;
 }
 
@@ -95,6 +95,10 @@ a {
 
 .pt-30 {
     padding-top: 30px;
+}
+
+.pt-50 {
+    padding-top: 50px;
 }
 
 .pr-15 {
@@ -208,7 +212,7 @@ html {
     margin-top: 30px;
 }
 
-.overlay a {
+header.home-header .overlay a {
     padding: 8px;
     text-decoration: none;
     color: white;
@@ -319,6 +323,10 @@ footer img {
     max-width: 200px;
 }
 
+.no-bg {
+    background: none !important;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -395,11 +403,15 @@ footer img {
     }
 
     header .justify-between {
-        padding: 10px 15px;
+        padding: 5px 15px;
     }
 
     .top-20 {
         top: 0;
+    }
+
+    .pt-50#top-div {
+        padding-top: 60px;
     }
 }
 

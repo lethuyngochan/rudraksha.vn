@@ -65,13 +65,15 @@
 }
 
 .content h1 {
-    font-size: 32px;
-    margin-top: 0;
+    font-size: 1.8em;
+    margin: 0;
+    color: rgba(63, 49, 48, 1);
 }
 
-.content h2 {
-    font-size: 24px;
-    margin-top: 0;
+.content h2,
+.content h3,
+.content b {
+    color: rgba(63, 49, 48, 1);
 }
 
 .p-30 {
@@ -258,6 +260,10 @@ button:hover {
     color: #815F42;
 }
 
+.max-width-30 {
+    max-width: 30px;
+}
+
 .max-width-100 {
     max-width: 100px;
 }
@@ -349,6 +355,14 @@ button:hover {
 .content-menu a.w-100 {
     color: white;
     opacity: 1;
+}
+
+footer a {
+    color: rgba(63, 49, 48, 0.5);
+}
+
+footer a:hover {
+    color: rgba(63, 49, 48, 1);
 }
 
 @media screen and (max-width:992px) {
