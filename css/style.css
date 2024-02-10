@@ -423,4 +423,9 @@ footer a:hover {
     .hinh-mo-ta {
         max-width: 100%;
     }
+    
+    footer .d-flex.container {
+        flex-direction: column;
+        padding: 0 0 30px;
+    }
 }
