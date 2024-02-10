@@ -365,6 +365,15 @@ footer a:hover {
     color: rgba(63, 49, 48, 1);
 }
 
+.ava {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 15px;
+    vertical-align: text-bottom;
+    margin: 0 5px 0 0;
+}
+
 @media screen and (max-width:992px) {
     .pl-60 {
         padding-left: 40px;
