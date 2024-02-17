@@ -598,6 +598,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var dropDownButton = document.querySelectorAll(".drop-down-button");
+        dropDownButton.forEach(function (button) {
+            button.onclick = function () {
+                button.classList.toggle("arrow-up");
+            };
+        });
+    </script>
 </body>
 
 </html>

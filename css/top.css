@@ -345,6 +345,11 @@ footer img {
     width: 10px;
     top: 7px;
     right: 0;
+    opacity: 0.7;
+}
+
+.drop-down-button.active::after {
+    opacity: 1;
 }
 
 .arrow-up.drop-down-button::after {
@@ -354,6 +359,14 @@ footer img {
 .drop-down-button span {
     padding: 10px 0;
     display: inline-block;
+}
+
+.drop-down-button {
+    opacity: 0.7;
+}
+
+.drop-down-button.active {
+    opacity: 1;
 }
 
 @media screen and (max-height: 450px) {
