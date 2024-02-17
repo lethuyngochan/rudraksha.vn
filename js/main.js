@@ -91,3 +91,11 @@ var zaloMess = document.getElementById('zalo-mess')
 contact.onclick = function() {
     zaloMess.classList.toggle("show");
 }
+
+// show drop down menu onclick
+var dropDownButton = document.querySelectorAll(".drop-down-button");
+dropDownButton.forEach(function (button) {
+    button.onclick = function() {
+        button.classList.toggle("arrow-up");
+    };
+});

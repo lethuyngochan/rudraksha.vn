@@ -1,7 +1,7 @@
 .sidebar a {
     color: rgba(63, 49, 48, 0.5);
     display: block;
-    padding: 15px 40px 10px 0;
+    padding: 10px 40px 10px 0;
     border-bottom: 1px solid rgba(63, 49, 48, 0.1);
     position: relative;
 }
@@ -28,7 +28,7 @@
     content: url(../img/sidebar-active.svg);
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 15px;
     width: 20px;
 }
 
@@ -372,6 +372,28 @@ footer a:hover {
     border-radius: 15px;
     vertical-align: text-bottom;
     margin: 0 5px 0 0;
+}
+
+.overlay span {
+    color: white;
+}
+
+.overlay .drop-down-button::after,
+.overlay .arrow-up.drop-down-button::after {
+    display: none;
+}
+
+.overlay .drop-down-button span::after {
+    content: url(../img/white-drop-down-icon.svg);
+    position: relative;
+    display: inline-block;
+    top: -1px;
+    width: 10px;
+    left: 10px;
+}
+
+.overlay .arrow-up.drop-down-button span::after {
+    content: url(../img/white-arrow-up.svg);
 }
 
 @media screen and (max-width:992px) {

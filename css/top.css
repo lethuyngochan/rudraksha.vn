@@ -327,6 +327,35 @@ footer img {
     background: none !important;
 }
 
+.drop-down-button .collapsed-menu {
+    display: none;
+}
+
+.drop-down-button.arrow-up .collapsed-menu {
+    display: block;
+}
+
+.drop-down-button:hover {
+    cursor: pointer;
+}
+
+.drop-down-button::after {
+    content: url(../img/drop-down-icon.svg);
+    position: absolute;
+    width: 10px;
+    top: 7px;
+    right: 0;
+}
+
+.arrow-up.drop-down-button::after {
+    content: url(../img/arrow-up.svg);
+}
+
+.drop-down-button span {
+    padding: 10px 0;
+    display: inline-block;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
