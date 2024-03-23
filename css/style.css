@@ -226,6 +226,7 @@ button:hover {
 #contact {
     right: 10px;
     bottom: 30px;
+    padding: 0;
 }
 
 #zalo-mess {
