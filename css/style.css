@@ -72,6 +72,11 @@
     color: rgba(63, 49, 48, 1);
 }
 
+.content h1.font-8 {
+    font-size: 8em;
+    line-height: 1;
+}
+
 .content h2,
 .content h3,
 .content b {
@@ -483,5 +488,9 @@ footer a:hover {
     footer .d-flex.container {
         flex-direction: column;
         padding: 0 0 30px;
+    }
+
+    .content h1.font-8 {
+        font-size: 5em;
     }
 }

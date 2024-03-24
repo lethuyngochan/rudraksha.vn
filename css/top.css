@@ -369,6 +369,14 @@ footer img {
     opacity: 1;
 }
 
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
