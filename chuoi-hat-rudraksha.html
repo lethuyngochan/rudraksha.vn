@@ -160,12 +160,13 @@
         <div class="pl-60 pr-60 content">
             <h1>Chuỗi hạt Kim Cang Bồ Đề, Vòng Rudraksha 108 hạt đã Thánh Hiến</h1><br>
             <div class="pos-rel">
-                <img src="img/rudraksha-5-khia.webp" class="slide w-100" alt="Vòng Rudraksha Hình 1">
-                <img src="img/rudraksha-6mm.webp" class="slide w-100" alt="Vòng Rudraksha Hình 2">
-                <img src="img/rudraksha-7mm.webp" class="slide w-100" alt="Vòng Rudraksha Hình 3">
-                <img src="img/rudraksha-8mm.webp" class="slide w-100" alt="Vòng Rudraksha Hình 1">
-                <img src="img/rudraksha-5-mukhi.webp" class="slide w-100" alt="Vòng Rudraksha Hình 2">
-                <img src="img/rudraksha-loi-ich.webp" class="slide w-100" alt="Vòng Rudraksha Hình 3">
+                <img src="img/rudraksha-5-khia.webp" class="slide w-100" alt="Rudraksha 5 khía">
+                <img src="img/rudraksha-5mm.webp" class="slide w-100" alt="Rudraksha 5mm">
+                <img src="img/rudraksha-6mm.webp" class="slide w-100" alt="Rudraksha 6mm">
+                <img src="img/rudraksha-7mm.webp" class="slide w-100" alt="Rudraksha 7mm">
+                <img src="img/rudraksha-8mm.webp" class="slide w-100" alt="Rudraksha 8mm">
+                <img src="img/rudraksha-5-mukhi.webp" class="slide w-100" alt="Rudraksha 5 mukhi">
+                <img src="img/rudraksha-loi-ich.webp" class="slide w-100" alt="Lợi ích của Rudraksha">
 
                 <a class="prev pos-abs" onclick="plusSlide(-1)">
                     <img src="img/prev.svg" alt="trước">
@@ -178,27 +179,31 @@
             <div class="d-flex">
                 <div class="w-33 mr-10 ml-10 mt-20">
                     <img src="img/rudraksha-5-khia.webp" class="w-100 thumbnail"
-                        onclick="currentSlide(1)" alt="Vòng Rudraksha Hình 1">
+                        onclick="currentSlide(1)" alt="Rudraksha 5 khía">
                 </div>
                 <div class="w-33 mr-10 ml-10 mt-20">
-                    <img src="img/rudraksha-6mm.webp" class="w-100 thumbnail" onclick="currentSlide(2)"
-                        alt="Vòng Rudraksha Hình 2">
+                    <img src="img/rudraksha-5mm.webp" class="w-100 thumbnail" onclick="currentSlide(2)"
+                        alt="Rudraksha 5mm">
                 </div>
                 <div class="w-33 mr-10 ml-10 mt-20">
-                    <img src="img/rudraksha-7mm.webp" class="w-100 thumbnail" onclick="currentSlide(3)"
-                        alt="Vòng Rudraksha Hình 3">
+                    <img src="img/rudraksha-6mm.webp" class="w-100 thumbnail" onclick="currentSlide(3)"
+                        alt="Rudraksha 6mm">
+                </div>
+                <div class="w-33 mr-10 ml-10 mt-20">
+                    <img src="img/rudraksha-7mm.webp" class="w-100 thumbnail" onclick="currentSlide(4)"
+                        alt="Rudraksha 7mm">
                 </div>
                 <div class="w-33 mr-10 ml-10 mt-20">
                     <img src="img/rudraksha-8mm.webp" class="w-100 thumbnail"
-                        onclick="currentSlide(4)" alt="Vòng Rudraksha Hình 1">
+                        onclick="currentSlide(5)" alt="Rudraksha 8mm">
                 </div>
                 <div class="w-33 mr-10 ml-10 mt-20">
-                    <img src="img/rudraksha-5-mukhi.webp" class="w-100 thumbnail" onclick="currentSlide(5)"
-                        alt="Vòng Rudraksha Hình 2">
+                    <img src="img/rudraksha-5-mukhi.webp" class="w-100 thumbnail" onclick="currentSlide(6)"
+                        alt="Rudraksha 5 mukhi">
                 </div>
                 <div class="w-33 mr-10 ml-10 mt-20">
-                    <img src="img/rudraksha-loi-ich.webp" class="w-100 thumbnail" onclick="currentSlide(6)"
-                        alt="Vòng Rudraksha Hình 3">
+                    <img src="img/rudraksha-loi-ich.webp" class="w-100 thumbnail" onclick="currentSlide(7)"
+                        alt="Lợi ích của Rudraksha">
                 </div>
             </div>
 
@@ -247,11 +252,13 @@
             <div class="d-flex pl-15 align-items-center flex-wrap">
                 <p>Kích thước: </p>
                 <button type="button" class="pos-rel size-btn mr-10 ml-10" id="size-btn1"
-                    onclick="changePrice6(),currentSlide(2)">6mm</button>
-                <button type="button" class="pos-rel size-btn mr-10" id="size-btn2"
-                    onclick="changePrice7(),currentSlide(3)">7mm</button>
-                <button type="button" class="pos-rel size-btn mr-10 active" id="size-btn3"
-                    onclick="changePrice8(),currentSlide(4)">8mm</button>
+                    onclick="changePrice5(),currentSlide(2)">5mm</button>
+                <button type="button" class="pos-rel size-btn mr-10 ml-10" id="size-btn2"
+                    onclick="changePrice6(),currentSlide(3)">6mm</button>
+                <button type="button" class="pos-rel size-btn mr-10" id="size-btn3"
+                    onclick="changePrice7(),currentSlide(4)">7mm</button>
+                <button type="button" class="pos-rel size-btn mr-10 active" id="size-btn4"
+                    onclick="changePrice8(),currentSlide(5)">8mm</button>
             </div>
             <script>
                 let newPrice = document.getElementById('new-price');
@@ -262,44 +269,62 @@
                 let sizeBtn1 = document.getElementById("size-btn1");
                 let sizeBtn2 = document.getElementById("size-btn2");
                 let sizeBtn3 = document.getElementById("size-btn3");
+                let sizeBtn4 = document.getElementById("size-btn4");
 
 
-                function changePrice6() {
+                function changePrice5() {
 
-                    newPrice.innerHTML = "680,000";
-                    oldPrice.innerHTML = "800,000";
-                    reducedPercentage.innerHTML = "-15%";
+                    newPrice.innerHTML = "1,288,000";
+                    oldPrice.innerHTML = "1,600,000";
+                    reducedPercentage.innerHTML = "-20%";
 
 
                     sizeBtn1.classList.add("active");
                     sizeBtn2.classList.remove("active");
                     sizeBtn3.classList.remove("active");
+                    sizeBtn4.classList.remove("active");
+
+                }
+
+                function changePrice6() {
+
+                    newPrice.innerHTML = "638,000";
+                    oldPrice.innerHTML = "800,000";
+                    reducedPercentage.innerHTML = "-20%";
+
+
+                    sizeBtn1.classList.remove("active");
+                    sizeBtn2.classList.add("active");
+                    sizeBtn3.classList.remove("active");
+                    sizeBtn4.classList.remove("active");
 
                 }
 
                 function changePrice7() {
 
-                    newPrice.innerHTML = "550,000";
+                    newPrice.innerHTML = "488,000";
                     oldPrice.innerHTML = "700,000";
-                    reducedPercentage.innerHTML = "-22%";
+                    reducedPercentage.innerHTML = "-30%";
 
 
-                    sizeBtn2.classList.add("active");
+                    sizeBtn2.classList.remove("active");
                     sizeBtn1.classList.remove("active");
-                    sizeBtn3.classList.remove("active");
+                    sizeBtn3.classList.add("active");
+                    sizeBtn4.classList.remove("active");
 
                 }
 
                 function changePrice8() {
 
-                    newPrice.innerHTML = "290,000";
+                    newPrice.innerHTML = "238,000";
                     oldPrice.innerHTML = "350,000";
-                    reducedPercentage.innerHTML = "-18%";
+                    reducedPercentage.innerHTML = "-32%";
 
 
-                    sizeBtn3.classList.add("active");
+                    sizeBtn3.classList.remove("active");
                     sizeBtn2.classList.remove("active");
                     sizeBtn1.classList.remove("active");
+                    sizeBtn4.classList.add("active");
 
                 }
             </script>
@@ -334,7 +359,7 @@
                 </ul>
             </div>
 
-            <a class="primary-btn w-100 d-block text-center mt-20 mb-15" href="tel:+84988468833">Hotline 098 846
+            <a class="primary-btn w-100 d-block text-center mt-20 mb-15" href="tel:+84988468833">Hotline 0988 46
                 8833</a>
             <a href="https://fb.com/rudraksha.vn" target="_blank" class="w-100"><img src="img/facebook-w100.svg"
                     class="w-100" alt="facebook Rudraksha"></a>
