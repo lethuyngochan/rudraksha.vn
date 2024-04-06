@@ -119,10 +119,6 @@
     width: 100%;
 }
 
-footer {
-    text-align: center;
-}
-
 .align-items-start {
     align-items: flex-start;
 }
@@ -492,5 +488,17 @@ footer a:hover {
 
     .content h1.font-8 {
         font-size: 5em;
+    }
+
+    footer .pl-30 {
+        padding-left: 0;
+    }
+
+    footer .pr-30 {
+        padding-right: 0;
+    }
+
+    footer .pt-48 {
+        padding-top: 20px;
     }
 }
