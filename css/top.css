@@ -316,12 +316,6 @@ header .justify-between {
     display: block;
 }
 
-.slide.w-100 {
-    max-width: 500px;
-    margin: 0 0 0 50%;
-    transform: translateX(-50%);
-}
-
 .logo,
 footer img {
     max-width: 200px;
