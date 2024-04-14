@@ -292,6 +292,7 @@ header .justify-between {
 
 .thumbnail {
     opacity: 0.5;
+    width: 11.9%;
 }
 
 .prev:hover, .next:hover, .thumbnail:hover, .thumbnail.active {
