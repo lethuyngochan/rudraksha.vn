@@ -115,6 +115,10 @@
     width: 50%;
 }
 
+.w-75 {
+    width: 75%;
+}
+
 .w-100 {
     width: 100%;
 }
@@ -422,6 +426,11 @@ footer a:hover {
     background: #555; 
 }
 
+#mota-nhanxet .content-menu {
+    top: 40px;
+    position: relative;
+}
+
 @media screen and (max-width:992px) {
     .pl-60 {
         padding-left: 40px;
@@ -500,5 +509,17 @@ footer a:hover {
 
     footer .pt-48 {
         padding-top: 20px;
+    }
+
+    .w-75 {
+        width: 100%;
+    }
+
+    #mota-nhanxet .content-menu {
+        display: none;
+    }
+
+    .w-75.pr-60 {
+        padding-right: 0;
     }
 }
