@@ -28,19 +28,20 @@
         <div class="container d-flex justify-center pos-rel">
             <div class="d-flex justify-between pos-abs w-100 top-20" id="menus">
                 <div class="d-flex align-items-center">
-                    <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="mobile-menu">&#9776;</span>
+                    <span style="font-size:30px;cursor:pointer" onclick="showContent('mainNav')"
+                        class="mobile-menu">&#9776;</span>
                     <a href="/"><img src="img/rudraksha-logo.webp" class="logo" alt="logo Rudraksha"></a>
                 </div>
                 <div class="d-flex align-items-center">
                     <a href="https://fb.com/rudraksha.vn" target="_blank" class="primary-btn">Mua ngay</a>
-                    <div style="font-size:30px;cursor:pointer" onclick="openSubNav()" class="mobile-menu">
-                        <img src="img/submenu.svg" class="submenu-img" alt="icon menu con">
+                    <div style="font-size:30px;cursor:pointer" onclick="showContent('subNav')" class="mobile-menu">
+                        <img src="img/submenu.svg" class="submenu-img" alt="icon menu con" width="18" height="18">
                     </div>
                 </div>
             </div>
             <img src="img/rudraksha-banner.webp" class="w-1000" alt="banner Rudraksha">
             <div id="mainNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="hideContent('mainNav')">&times;</a>
                 <div class="overlay-content pb-15">
                     <a href="https://rudraksha.vn/#top-div">Rudraksha là gì, ai nên đeo?</a>
                     <a href="chuoi-hat-rudraksha.html#top-div">Chuỗi hạt Rudraksha</a>
@@ -84,7 +85,7 @@
                 </div>
             </div>
             <div id="subNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="hideContent('subNav')">&times;</a>
                 <div class="overlay-content pb-15">
                     <a href="#vong-deo-tay-hat-kim-cang-rudraksha">Vòng đeo tay hạt Kim Cang Rudraksha nhập khẩu Ấn
                         Độ</a>
@@ -94,28 +95,618 @@
                     <a href="#luu-y-khi-deo-vong-hat-rudraksha">Lưu ý khi đeo hạt vòng hạt Rudraksha</a>
                 </div>
             </div>
-
-            <script>
-                function openNav() {
-                    document.getElementById("mainNav").style.display = "block";
-                }
-
-                function closeNav() {
-                    document.getElementById("mainNav").style.display = "none";
-                }
-                function openSubNav() {
-                    document.getElementById("subNav").style.display = "block";
-                }
-
-                function closeSubNav() {
-                    document.getElementById("subNav").style.display = "none";
-                }
-            </script>
         </div>
     </header>
 
+    <!-- <section class="d-flex flex-wrap container pt-50 align-items-start mb-30" id="top-div">
+        <nav class="sidebar pl-15 pr-15">
+            <form action="/action_page.php" class="mb-60">
+                <label for="price">Giá</label><br>
+                <select name="price" id="price" class="w-100">
+                    <option value="Từ thấp đến cao">Từ thấp đến cao</option>
+                    <option value="Từ cao đến thấp">Từ cao đến thấp</option>
+                    <option value="Bán chạy">Bán chạy</option>
+                </select><br><br>
+                <label for="element">Mệnh</label><br>
+                <select name="element" id="element" class="w-100">
+                    <option value="Kim">Kim</option>
+                    <option value="Mộc">Mộc</option>
+                    <option value="Thuỷ">Thuỷ</option>
+                    <option value="Hoả">Hoả</option>
+                    <option value="Thổ">Thổ</option>
+                </select><br><br>
+                <label for="gender">Giới tính</label><br>
+                <select name="gender" id="gender" class="w-100">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select><br><br>
+                <div class="d-flex">
+                    <input type="submit" value="Áp dụng" class="primary-btn w-50 mr-10 text-center">
+                    <input type="reset" value="Làm lại" class="secondary-btn w-50 ml-10 text-center">
+                </div>
+            </form>
+        </nav>
+        <button onclick="showContent('filter-popup')" class="filter-btn secondary-btn p-10 ml-20 mb-30 font-09">Lọc sản
+            phẩm</button>
+        <div id="filter-popup" class="overlay">
+            <div class="d-flex justify-center align-items-center">
+                <div class="overlay-content pb-15 white-bg w-75 pos-rel">
+                    <a href="javascript:void(0)" class="closebtn pos-abs"
+                        onclick="hideContent('filter-popup')">&times;</a>
+                    <p class="mb-0 mt-0"><b>Giá</b></p>
+                    <form class="mb-15">
+                        <input type="checkbox" id="low-to-high" name="low-to-high" value="Từ thấp đến cao">
+                        <label for="low-to-high"> Từ thấp đến cao</label><br>
+                        <input type="checkbox" id="high-to-low" name="high-to-low" value="Từ cao đến thấp">
+                        <label for="high-to-low"> Từ cao đến thấp</label><br>
+                        <input type="checkbox" id="best-seller" name="best-seller" value="Bán chạy">
+                        <label for="best-seller"> Bán chạy</label>
+                    </form>
+                    <p class="mb-0"><b>Mệnh</b></p>
+                    <form class="mb-15">
+                        <input type="checkbox" id="kim" name="kim" value="Kim">
+                        <label for="kim"> Kim</label><br>
+                        <input type="checkbox" id="moc" name="moc" value="Mộc">
+                        <label for="moc"> Mộc</label><br>
+                        <input type="checkbox" id="thuy" name="thuy" value="Thuỷ">
+                        <label for="thuy"> Thuỷ</label><br>
+                        <input type="checkbox" id="hoa" name="hoa" value="Hoả">
+                        <label for="hoa"> Hoả</label><br>
+                        <input type="checkbox" id="tho" name="tho" value="Thổ">
+                        <label for="tho"> Thổ</label>
+                    </form>
+                    <p class="mb-0"><b>Giới tính</b></p>
+                    <form class="mb-15">
+                        <input type="checkbox" id="nam" name="nam" value="Nam">
+                        <label for="nam"> Nam</label><br>
+                        <input type="checkbox" id="nu" name="nu" value="Nữ">
+                        <label for="nu"> Nữ</label>
+                    </form>
+                    <div class="d-flex mb-60">
+                        <a href="#" class="primary-btn w-50 mr-10 text-center">Áp dụng</a>
+                        <a href="#" class="secondary-btn w-50 ml-10 text-center">Làm lại</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pl-60 pr-60 content w-75">
+            <div class="d-flex flex-wrap mb-30">
+                <div class="pl-5 pr-5 text-center product" onclick="showContent('product-details')">
+                    <img src="img/vong-tay-kim-cang-rudraksha.webp" class="w-100"
+                        alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                    <div class="border white-bg p-15 pos-rel">
+                        <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                        <p class="m-0 font-15 orange"><b>238,000</b></p>
+                        <div class="primary-btn d-inline-block mt-10 mb-15">Mua hàng</div>
+                    </div>
+                </div>
+                <div class="pl-5 pr-5 text-center product" onclick="showContent('product-details')">
+                    <img src="img/vong-tay-kim-cang-rudraksha.webp" class="w-100"
+                        alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                    <div class="border white-bg p-15 pos-rel">
+                        <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                        <p class="m-0 font-15 orange"><b>238,000</b></p>
+                        <div class="primary-btn d-inline-block mt-10 mb-15">Mua hàng</div>
+                    </div>
+                </div>
+                <div class="pl-5 pr-5 text-center product" onclick="showContent('product-details')">
+                    <img src="img/vong-tay-kim-cang-rudraksha.webp" class="w-100"
+                        alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                    <div class="border white-bg p-15 pos-rel">
+                        <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                        <p class="m-0 font-15 orange"><b>238,000</b></p>
+                        <div class="primary-btn d-inline-block mt-10 mb-15">Mua hàng</div>
+                    </div>
+                </div>
+                <div class="pl-5 pr-5 text-center product" onclick="showContent('product-details')">
+                    <img src="img/vong-tay-kim-cang-rudraksha.webp" class="w-100"
+                        alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                    <div class="border white-bg p-15 pos-rel">
+                        <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                        <p class="m-0 font-15 orange"><b>238,000</b></p>
+                        <div class="primary-btn d-inline-block mt-10 mb-15">Mua hàng</div>
+                    </div>
+                </div>
+                <div class="pl-5 pr-5 text-center product" onclick="showContent('product-details')">
+                    <img src="img/vong-tay-kim-cang-rudraksha.webp" class="w-100"
+                        alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                    <div class="border white-bg p-15 pos-rel">
+                        <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                        <p class="m-0 font-15 orange"><b>238,000</b></p>
+                        <div class="primary-btn d-inline-block mt-10 mb-15">Mua hàng</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product-details" class="overlay">
+                <div class="d-flex justify-center align-items-center">
+                    <div class="overlay-content pb-15 white-bg w-75 pos-rel">
+                        <a href="javascript:void(0)" class="closebtn pos-abs"
+                            onclick="hideContent('product-details')">&times;</a>
+                        <div class="d-flex p-30">
+                            <div class="w-50">
+                                <h1>Chuỗi hạt Kim Cang Bồ Đề Rudraksha Mala 108 hạt đã Thánh Hiến tại Isha Ấn Độ</h1>
+                                <br>
+                                <div class="pos-rel">
+                                    <div class="text-center pr-15 pl-15">
+                                        <img src="img/rudraksha-5-khia.webp" alt="Rudraksha 5 khía"
+                                            class="slide w-100" />
+                                        <img src="img/rudraksha-5mm.webp" alt="Rudraksha 5mm" class="slide w-100" />
+                                        <img src="img/rudraksha-6mm.webp" alt="Rudraksha 6mm" class="slide w-100" />
+                                        <img src="img/rudraksha-7mm.webp" alt="Rudraksha 7mm" class="slide w-100" />
+                                        <img src="img/rudraksha-8mm.webp" alt="Rudraksha 8mm" class="slide w-100" />
+                                        <img src="img/rudraksha-5-mukhi.webp" alt="Rudraksha 5 mukhi"
+                                            class="slide w-100" />
+                                        <img src="img/rudraksha-loi-ich.webp" alt="Lợi ích của Rudraksha"
+                                            class="slide w-100" />
+                                    </div>
+
+                                    <a class="prev pos-abs" onclick="plusSlide(-1)">
+                                        <img src="img/prev.svg" alt="trước" width="24" height="30">
+                                    </a>
+                                    <a class="next pos-abs" onclick="plusSlide(1)">
+                                        <img src="img/next.svg" alt="kế" width="24" height="30">
+                                    </a>
+                                </div>
+
+                                <div class="d-flex justify-center">
+                                    <img src="img/rudraksha-5-khia.webp" alt="Rudraksha 5 khía"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(1)" />
+                                    <img src="img/rudraksha-5mm.webp" alt="Rudraksha 5mm"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(2)" />
+                                    <img src="img/rudraksha-6mm.webp" alt="Rudraksha 6mm"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(3)" />
+                                    <img src="img/rudraksha-7mm.webp" alt="Rudraksha 7mm"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(4)" />
+                                    <img src="img/rudraksha-8mm.webp" alt="Rudraksha 8mm"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(5)" />
+                                    <img src="img/rudraksha-5-mukhi.webp" alt="Rudraksha 5 mukhi"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(6)" />
+                                    <img src="img/rudraksha-loi-ich.webp" alt="Lợi ích của Rudraksha"
+                                        class="thumbnail mr-5 ml-5 mt-20" onclick="currentSlide(7)" />
+                                </div>
+
+                                <script>
+                                    let slideIndex = 1;
+                                    showSlide(slideIndex);
+
+                                    function plusSlide(n) {
+                                        showSlide(slideIndex += n);
+                                    }
+
+                                    function currentSlide(n) {
+                                        showSlide(slideIndex = n);
+                                    }
+
+                                    function showSlide(n) {
+                                        let i;
+                                        let slides = document.getElementsByClassName('slide');
+                                        let thumbnails = document.getElementsByClassName('thumbnail');
+                                        if (n > slides.length) { slideIndex = 1 }
+                                        if (n < 1) { slideIndex = slides.length }
+                                        for (i = 0; i < slides.length; i++) {
+                                            slides[i].style.display = 'none';
+                                        }
+                                        for (i = 0; i < thumbnails.length; i++) {
+                                            thumbnails[i].className = thumbnails[i].className.replace(' active', '');
+                                        }
+                                        slides[slideIndex - 1].style.display = 'block';
+                                        thumbnails[slideIndex - 1].className += ' active';
+                                    }
+                                </script>
+                                <p class="m-0 pl-15">Giá: <b><span class="font-15 orange"
+                                            id="new-price">238,000</span></b> <span class="line-through"
+                                        id="old-price">350,000</span> <span class="orange"
+                                        id="reduced-percentage">-32%</span></p>
+                                <p class="pl-15 mb-5 mt-0">Kích thước: </p>
+                                <div class="d-flex pl-15 align-items-center flex-wrap">
+                                    <button type="button" class="pos-rel size-btn mr-10" id="size-btn1"
+                                        onclick="changePrice5(),currentSlide(2)">5mm</button>
+                                    <button type="button" class="pos-rel size-btn mr-10" id="size-btn2"
+                                        onclick="changePrice6(),currentSlide(3)">6mm</button>
+                                    <button type="button" class="pos-rel size-btn mr-10" id="size-btn3"
+                                        onclick="changePrice7(),currentSlide(4)">7mm</button>
+                                    <button type="button" class="pos-rel size-btn mr-10 active" id="size-btn4"
+                                        onclick="changePrice8(),currentSlide(5)">8mm</button>
+                                </div>
+                                <script>
+                                    let newPrice = document.getElementById('new-price');
+                                    let oldPrice = document.getElementById('old-price');
+                                    let reducedPercentage = document.getElementById('reduced-percentage');
+
+
+                                    let sizeBtn1 = document.getElementById("size-btn1");
+                                    let sizeBtn2 = document.getElementById("size-btn2");
+                                    let sizeBtn3 = document.getElementById("size-btn3");
+                                    let sizeBtn4 = document.getElementById("size-btn4");
+
+
+                                    function changePrice5() {
+
+                                        newPrice.innerHTML = "1,288,000";
+                                        oldPrice.innerHTML = "1,600,000";
+                                        reducedPercentage.innerHTML = "-20%";
+
+
+                                        sizeBtn1.classList.add("active");
+                                        sizeBtn2.classList.remove("active");
+                                        sizeBtn3.classList.remove("active");
+                                        sizeBtn4.classList.remove("active");
+
+                                    }
+
+                                    function changePrice6() {
+
+                                        newPrice.innerHTML = "638,000";
+                                        oldPrice.innerHTML = "800,000";
+                                        reducedPercentage.innerHTML = "-20%";
+
+
+                                        sizeBtn1.classList.remove("active");
+                                        sizeBtn2.classList.add("active");
+                                        sizeBtn3.classList.remove("active");
+                                        sizeBtn4.classList.remove("active");
+
+                                    }
+
+                                    function changePrice7() {
+
+                                        newPrice.innerHTML = "488,000";
+                                        oldPrice.innerHTML = "700,000";
+                                        reducedPercentage.innerHTML = "-30%";
+
+
+                                        sizeBtn2.classList.remove("active");
+                                        sizeBtn1.classList.remove("active");
+                                        sizeBtn3.classList.add("active");
+                                        sizeBtn4.classList.remove("active");
+
+                                    }
+
+                                    function changePrice8() {
+
+                                        newPrice.innerHTML = "238,000";
+                                        oldPrice.innerHTML = "350,000";
+                                        reducedPercentage.innerHTML = "-32%";
+
+
+                                        sizeBtn3.classList.remove("active");
+                                        sizeBtn2.classList.remove("active");
+                                        sizeBtn1.classList.remove("active");
+                                        sizeBtn4.classList.add("active");
+
+                                    }
+                                </script>
+                            </div>
+                            <div class="w-50">
+                                <ul>
+                                    <li>Chuỗi hạt Kim Cang Rudraksha đã Thánh Hiến được hưởng tất cả những năng lượng
+                                        tích cực nhất
+                                        tại Dhyanalinga - Đền năng lượng thiền ở Ấn Độ, bất cứ tôn giáo nào cũng có thể
+                                        dùng.</li>
+                                    <li>Chuỗi Rudraksha Mala hỗ trợ người đeo đạt được trạng thái thiền định &amp; an
+                                        lạc sâu hơn.</li>
+                                    <li>Tạo cho bạn một cái kén năng lượng bao bọc xung quanh, bảo vệ bạn khỏi những
+                                        năng lượng tiêu cực
+                                        từ bên ngoài.</li>
+                                    <li>Hạt Rudraksha, chứa lượng carbon, hydro, nitơ và oxy, mang lại những lợi ích sức
+                                        khỏe không ngờ.
+                                        Các thành phần này có tác dụng chữa lành tâm trí, giảm bệnh tim, hạ huyết áp và
+                                        nâng cao nhận
+                                        thức.</li>
+                                    <li>Đặc biệt, hạt Rudraksha giúp cân bằng nhiệt lượng trong cơ thể, tạo cảm giác mát
+                                        mẻ và thoải mái
+                                        cho người đeo.</li>
+                                    <li>Hạt Rudraksha 5 khía hỗ trợ kích thích tinh thần lạc quan và tăng cường quyết
+                                        tâm.</li>
+                                    <li>Tại trung tâm Isha, tất cả hạt Kim Cang đều phải chờ hạt chín tự rụng, do vậy
+                                        hạt nhỏ sẽ hiếm hơn nên giá thành cao
+                                        hơn, còn về mặt năng lượng thì chúng như nhau.</li>
+                                    <li>Loại: Chuỗi hạt Kim Cang 5 khía.</li>
+                                    <li>Xuất xứ: Nhập khẩu Ấn Độ.</li>
+                                </ul>
+
+                                <div class="d-flex">
+                                    <a class="primary-btn d-inline-block mt-20 mb-15 ml-30"
+                                        href="https://m.me/rudraksha.vn">Đặt mua ngay</a>
+                                    <a class="secondary-btn d-inline-block mt-20 mb-15 ml-5"
+                                        onclick="hideContent('product-details'),showContent('cart-popup')">Thêm vào giỏ
+                                        hàng</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="shipping-info-popup" class="overlay">
+                <div class="d-flex justify-center align-items-center">
+                    <div class="overlay-content p-30 white-bg w-75 pos-rel">
+                        <a href="javascript:void(0)" class="closebtn pos-abs"
+                            onclick="hideContent('shipping-info-popup')">&times;</a>
+                        <div class="d-flex w-100 justify-between pr-30 pl-30">
+                            <div class="d-flex align-items-center flex-direction-column">
+                                <p class="step-no d-flex justify-center align-items-center mb-0 pos-rel" id="step1">1
+                                </p>
+                                <p class="mt-10">Giỏ hàng</p>
+                            </div>
+                            <div class="d-flex align-items-center flex-direction-column">
+                                <p class="step-no d-flex justify-center align-items-center mb-0 pos-rel" id="step2">2
+                                </p>
+                                <p class="mt-10">Giao hàng</p>
+                            </div>
+                            <div class="d-flex align-items-center flex-direction-column">
+                                <p class="step-no d-flex justify-center align-items-center mb-0 pos-rel" id="step3">3
+                                </p>
+                                <p class="mt-10">Xác nhận</p>
+                            </div>
+                        </div>
+                        <div id="step1-content">
+                            <div class="d-flex">
+                                <p class="w-50">Tên</p>
+                                <p class="w-25">Số lượng</p>
+                                <p class="w-25">Gía</p>
+                            </div>
+                            <div class="d-flex mb-10">
+                                <div class="w-50 d-flex align-items-center">
+                                    <img src="img/vong-tay-kim-cang-rudraksha.webp" width="50" height="50"
+                                        alt="Vòng đeo tay hạt Kim Cang Rudraksha" class="mr-10">
+                                    <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                </div>
+                                <div class="w-25">
+                                    <div class="number-input mt-10">
+                                        <button
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                        <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                            class="plus"></button>
+                                    </div>
+                                </div>
+                                <div class="w-25">
+                                    <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-10">
+                                <div class="w-50 d-flex align-items-center">
+                                    <img src="img/vong-tay-kim-cang-rudraksha.webp" width="50" height="50"
+                                        alt="Vòng đeo tay hạt Kim Cang Rudraksha" class="mr-10">
+                                    <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                </div>
+                                <div class="w-25">
+                                    <div class="number-input mt-10">
+                                        <button
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                        <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                            class="plus"></button>
+                                    </div>
+                                </div>
+                                <div class="w-25">
+                                    <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-10">
+                                <div class="w-50 d-flex align-items-center">
+                                    <img src="img/vong-tay-kim-cang-rudraksha.webp" width="50" height="50"
+                                        alt="Vòng đeo tay hạt Kim Cang Rudraksha" class="mr-10">
+                                    <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                </div>
+                                <div class="w-25">
+                                    <div class="number-input mt-10">
+                                        <button
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                        <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                            class="plus"></button>
+                                    </div>
+                                </div>
+                                <div class="w-25">
+                                    <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                </div>
+                            </div>
+                            <p class="text-right border-top pt-15">Tổng cộng <span
+                                    class="m-0 font-15 orange"><b>238,000</b></span></p>
+                            <div class="d-flex justify-between">
+                                <a class="secondary-btn d-inline-block ml-5"
+                                    onclick="hideContent('shipping-info-popup')">Tiếp tục mua hàng</a>
+                                <a class="primary-btn d-inline-block ml-30"
+                                    onclick="hideContent('step1-content'),showContent('step2-content')">Giao hàng</a>
+                            </div>
+                        </div>
+                        <div id="step2-content" class="tab-content">
+                            <div class="d-flex mb-30">
+                                <div class="w-50 pr-15 pl-15">
+                                    <form action="/action_page.php">
+                                        <label for="fname">Nhập họ và tên</label><br>
+                                        <input type="text" id="fname" name="fname" class="w-100"><br>
+                                        <label for="phone" class="mt-10 d-inline-block">Nhập số điện thoại</label><br>
+                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                                            class="w-100"><br>
+                                        <label for="fname" class="mt-10 d-inline-block">Nhập địa chỉ</label><br>
+                                        <input type="text" id="fname" name="fname" class="w-100"><br>
+                                        <label for="note" class="mt-10 d-inline-block">Ghi chú đơn hàng</label>
+                                        <textarea id="note" name="note" rows="4" class="w-100"></textarea>
+                                        <div class="d-flex align-items-center mt-20">
+                                            <label for="fname" class="d-inline-block mr-10">Mã khuyến mãi</label>
+                                            <input type="text" id="fname" name="fname" class="flex-grow-1">
+                                            <input type="submit" value="Áp dụng" class="secondary-btn ml-10">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="w-50 pr-15 pl-15 pt-15">
+                                    <div class="border pr-15 pl-15 border-radius-5 mb-15">
+                                        <p class="mb-0"><b>Phí ship</b></p>
+                                        <p class="mt-0"><span class="line-through">45,000Đ</span> <b>28,000Đ</b> (do
+                                            shop quen với chỗ ship nên có giá tốt)</p>
+                                    </div>
+                                    <div
+                                        class="d-flex border pr-15 pl-15 border-radius-5 align-items-center justify-between">
+                                        <div>
+                                            <p class="mb-0"><b>Sản phẩm</b></p>
+                                            <p class="mt-0">699,000</p>
+                                        </div>
+                                        <div>
+                                            <p>+</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0"><b>Phí ship</b></p>
+                                            <p class="mt-0">28,000</p>
+                                        </div>
+                                        <div>
+                                            <p>=</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0"><b>Tổng cộng</b></p>
+                                            <p class="mt-0">727,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-between border-top pt-30">
+                                <a class="secondary-btn d-inline-block ml-5"
+                                    onclick="hideContent('step2-content'),showContent('step1-content')">Giỏ hàng</a>
+                                <a class="primary-btn d-inline-block ml-30"
+                                    onclick="hideContent('step2-content'),showContent('step3-content')">Xác nhận</a>
+                            </div>
+                        </div>
+                        <div id="step3-content" class="tab-content">
+                            <div class="d-flex mb-30">
+                                <div class="w-50 border border-radius-5 mr-10 ml-10 p-30">
+                                    <div class="d-flex align-items-center justify-between border-bottom">
+                                        <img src="img/vong-tay-kim-cang-rudraksha.webp" width="50" height="50"
+                                            alt="Vòng đeo tay hạt Kim Cang Rudraksha" class="mr-10">
+                                        <p class="m-0 line-height-12"><b>Chuỗi hạt đeo cổ Rudraksha 5 cạnh</b></p>
+                                        <p class="pr-15 pl-15">1</p>
+                                        <p class="m-0"><b>238,000</b></p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-between border-bottom">
+                                        <img src="img/vong-tay-kim-cang-rudraksha.webp" width="50" height="50"
+                                            alt="Vòng đeo tay hạt Kim Cang Rudraksha" class="mr-10">
+                                        <p class="m-0 line-height-12"><b>Chuỗi hạt đeo cổ Rudraksha 5 cạnh</b></p>
+                                        <p class="pr-15 pl-15">1</p>
+                                        <p class="m-0"><b>238,000</b></p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-between border-bottom">
+                                        <img src="img/vong-tay-kim-cang-rudraksha.webp" width="50" height="50"
+                                            alt="Vòng đeo tay hạt Kim Cang Rudraksha" class="mr-10">
+                                        <p class="m-0 line-height-12"><b>Chuỗi hạt đeo cổ Rudraksha 5 cạnh</b></p>
+                                        <p class="pr-15 pl-15">1</p>
+                                        <p class="m-0"><b>238,000</b></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0"><b>Phí ship</b></p>
+                                        <p class="mt-0">28,000Đ</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0"><b>Giảm giá</b></p>
+                                        <p class="mt-0">-Đ</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0"><b>Tổng cộng</b></p>
+                                        <p class="mt-0">727,000Đ</p>
+                                    </div>
+                                </div>
+                                <div class="w-50 border border-radius-5 mr-10 ml-10 p-30">
+                                    <p class="mb-0"><b>Tên khách</b></p>
+                                    <p class="mt-0">Hân</p>
+                                    <p class="mb-0"><b>Địa chỉ</b></p>
+                                    <p class="mt-0">111 đường số 8</p>
+                                    <p class="mb-0"><b>Số điện thoại</b></p>
+                                    <p class="mt-0">0946499847</p>
+                                    <p class="mb-0"><b>Ghi chú đơn hàng</b></p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-between border-top pt-30">
+                                <a class="secondary-btn d-inline-block ml-5"
+                                    onclick="hideContent('cart-popup'),showContent('cart-popup')">Thông tin giao
+                                    hàng</a>
+                                <a class="primary-btn d-inline-block ml-30" href="thank-you.html">Đặt hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cart-popup" class="overlay">
+                <div class="d-flex justify-center align-items-center">
+                    <div class="overlay-content p-30 white-bg w-600 pos-rel">
+                        <a href="javascript:void(0)" class="closebtn pos-abs"
+                            onclick="hideContent('cart-popup')">&times;</a>
+                        <div class="d-flex mb-10">
+                            <img src="img/vong-tay-kim-cang-rudraksha.webp" width="130" height="130"
+                                alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                            <div class="pl-30 d-flex flex-direction-column justify-center align-items-start">
+                                <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                <div class="number-input mt-10">
+                                    <button
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                        class="plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-10">
+                            <img src="img/vong-tay-kim-cang-rudraksha.webp" width="130" height="130"
+                                alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                            <div class="pl-30 d-flex flex-direction-column justify-center align-items-start">
+                                <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                <div class="number-input mt-10">
+                                    <button
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                        class="plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-10">
+                            <img src="img/vong-tay-kim-cang-rudraksha.webp" width="130" height="130"
+                                alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                            <div class="pl-30 d-flex flex-direction-column justify-center align-items-start">
+                                <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                <div class="number-input mt-10">
+                                    <button
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                        class="plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-10">
+                            <img src="img/vong-tay-kim-cang-rudraksha.webp" width="130" height="130"
+                                alt="Vòng đeo tay hạt Kim Cang Rudraksha">
+                            <div class="pl-30 d-flex flex-direction-column justify-center align-items-start">
+                                <p class="m-0">Chuỗi hạt đeo cổ Rudraksha 5 cạnh</p>
+                                <p class="m-0 font-15 orange"><b>238,000</b></p>
+                                <div class="number-input mt-10">
+                                    <button
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                        class="plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-right border-top pt-15">Tổng cộng <span
+                                class="m-0 font-15 orange"><b>238,000</b></span></p>
+                        <div class="d-flex justify-between">
+                            <a class="secondary-btn d-inline-block ml-5"
+                                onclick="hideContent('cart-popup'),showContent('cart-popup')">Tiếp tục mua hàng</a>
+                            <a class="primary-btn d-inline-block ml-30"
+                                onclick="hideContent('cart-popup'),showContent('shipping-info-popup')">Đặt hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
     <section class="d-flex flex-wrap container pt-50 align-items-start mb-60" id="top-div">
-        <nav class="sidebar">
+        <nav class="sidebar content-list">
             <a href="https://rudraksha.vn/#top-div">Rudraksha là gì, ai nên đeo?</a>
             <a href="chuoi-hat-rudraksha.html#top-div">Chuỗi hạt Rudraksha</a>
             <a href="vong-deo-tay-hat-kim-cang-rudraksha.html#top-div" class="active">Vòng đeo tay Rudraksha</a>
@@ -270,25 +861,33 @@
             <div class="d-flex container">
                 <div class="pr-30">
                     <img src="img/white-rudraksha-logo.webp" alt="logo Rudraksha">
-                    <p class="mt-0 max-width-600 m-auto mb-30">Rudraksha.vn là nơi nhập khẩu trực tiếp chuỗi vòng hạt Kim Cang
-                        Rudraksha từ Ấn Độ, 100% hạt thiên nhiên. Liên hệ ngay 0988.46.88.33 để đặt mua hoặc mua trực tiếp tại
+                    <p class="mt-0 max-width-600 m-auto mb-30">Rudraksha.vn là nơi nhập khẩu trực tiếp chuỗi vòng hạt
+                        Kim Cang
+                        Rudraksha từ Ấn Độ, 100% hạt thiên nhiên. Liên hệ ngay 0988.46.88.33 để đặt mua hoặc mua trực
+                        tiếp tại
                         các trang TMĐT của chúng tôi bên dưới:</p>
                     <div class="d-flex">
-                        <a href="https://fb.com/rudraksha.vn" target="_blank"><img src="img/facebook.svg" class="max-width-100"
-                                alt="facebook rudraksha"></a>
+                        <a href="https://fb.com/rudraksha.vn" target="_blank"><img src="img/facebook.svg"
+                                class="max-width-100" alt="facebook rudraksha"></a>
                         <!-- <a href="https://www.facebook.com/bancha.vn" target="_blank"><img src="img/bancha-group.svg"></a> 
                         <a href="https://www.lazada.vn/shop/bancha-vn" target="_blank"><img src="img/lazada.webp" class="max-width-100"></a>
                         <a href="https://shopee.vn/bancha.vn" target="_blank"><img src="img/shopee.webp" class="max-width-100"></a>-->
                     </div>
                 </div>
                 <div class="pl-30 pt-48">
-                    <p><b>Công ty TNHH dịch vụ AlphaIQ</b><br>B270 Tô Ký, Tổ 6, Khu phố 3, Đông Hưng Thuận, Quận 12, TPHCM.
-                    <br><b>Mã số doanh nghiệp</b><br>0315532495 cấp ngày 28/02/2019<br>
-                    <b>Nơi cấp</b><br>SỞ KẾ HOẠCH VÀ ĐẦU TƯ THÀNH PHỐ HỒ CHÍ MINH</p>
+                    <p><b>Công ty TNHH dịch vụ AlphaIQ</b><br>B270 Tô Ký, Tổ 6, Khu phố 3, Đông Hưng Thuận, Quận 12,
+                        TPHCM.
+                        <br><b>Mã số doanh nghiệp</b><br>0315532495 cấp ngày 28/02/2019<br>
+                        <b>Nơi cấp</b><br>SỞ KẾ HOẠCH VÀ ĐẦU TƯ THÀNH PHỐ HỒ CHÍ MINH
+                    </p>
                     <div class="d-flex align-items-center">
                         <!-- <img src="img/bo-cong-thuong.webp" class="mr-10"> -->
                         <!-- <img src="img/_dmca_premi_badge_4.webp" class="mb-15"> -->
-                        <a href="https://www.dmca.com/Protection/Status.aspx?id=ee0bf264-9ff0-423c-9793-9a07869b692c&refurl=https%3a%2f%2frudraksha.vn%2fvong-deo-tay-hat-kim-cang-rudraksha.html&rlo=true" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=ee0bf264-9ff0-423c-9793-9a07869b692c"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+                        <a href="https://www.dmca.com/Protection/Status.aspx?id=ee0bf264-9ff0-423c-9793-9a07869b692c&refurl=https%3a%2f%2frudraksha.vn%2fvong-deo-tay-hat-kim-cang-rudraksha.html&rlo=true"
+                            title="DMCA.com Protection Status" class="dmca-badge"> <img
+                                src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=ee0bf264-9ff0-423c-9793-9a07869b692c"
+                                alt="DMCA.com Protection Status" /></a>
+                        <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
                     </div>
                 </div>
             </div>

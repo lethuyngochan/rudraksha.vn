@@ -27,19 +27,19 @@
         <div class="container d-flex justify-center pos-rel">
             <div class="d-flex justify-between pos-abs w-100 top-20" id="menus">
                 <div class="d-flex align-items-center">
-                    <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="mobile-menu">&#9776;</span>
+                    <span style="font-size:30px;cursor:pointer" onclick="showContent('mainNav')" class="mobile-menu">&#9776;</span>
                     <a href="/"><img src="img/rudraksha-logo.webp" class="logo" alt="logo Rudraksha"></a>
                 </div>
                 <div class="d-flex align-items-center">
                     <a href="https://fb.com/rudraksha.vn" target="_blank" class="primary-btn">Mua ngay</a>
-                    <div style="font-size:30px;cursor:pointer" onclick="openSubNav()" class="mobile-menu">
-                        <img src="img/submenu.svg" class="submenu-img" alt="icon menu con">
+                    <div style="font-size:30px;cursor:pointer" onclick="showContent('subNav')" class="mobile-menu">
+                        <img src="img/submenu.svg" class="submenu-img" alt="icon menu con" width="18" height="18">
                     </div>
                 </div>
             </div>
             <img src="img/rudraksha-banner.webp" class="w-1000" alt="banner rudraksha">
             <div id="mainNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="hideContent('mainNav')">&times;</a>
                 <div class="overlay-content pb-15">
                     <a href="https://rudraksha.vn/#top-div">Rudraksha là gì, ai nên đeo?</a>
                     <a href="chuoi-hat-rudraksha.html#top-div">Chuỗi hạt Rudraksha</a>
@@ -83,34 +83,17 @@
                 </div>
             </div>
             <div id="subNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="hideContent('subNav')">&times;</a>
                 <div class="overlay-content pb-15">
                     <a href="#cach-lam-sach-vong-rudraksha">Cách làm sạch vòng Rudraksha</a>
                     <a href="#bao-quan-rudraksha-dung-cach">Bảo quản Rudraksha đúng cách</a>
                 </div>
             </div>
-
-            <script>
-                function openNav() {
-                    document.getElementById("mainNav").style.display = "block";
-                }
-
-                function closeNav() {
-                    document.getElementById("mainNav").style.display = "none";
-                }
-                function openSubNav() {
-                    document.getElementById("subNav").style.display = "block";
-                }
-
-                function closeSubNav() {
-                    document.getElementById("subNav").style.display = "none";
-                }
-            </script>
         </div>
     </header>
 
     <section class="d-flex flex-wrap container pt-50 align-items-start mb-60" id="top-div">
-        <nav class="sidebar">
+        <nav class="sidebar content-list">
             <a href="https://rudraksha.vn/#top-div">Rudraksha là gì, ai nên đeo?</a>
             <a href="chuoi-hat-rudraksha.html#top-div">Chuỗi hạt Rudraksha</a>
             <a href="vong-deo-tay-hat-kim-cang-rudraksha.html#top-div">Vòng đeo tay Rudraksha</a>
