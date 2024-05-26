@@ -404,12 +404,16 @@ footer img {
     height: 100vh;
 }
 
-.content .border.white-bg.pos-rel {
+.product .border.white-bg.pos-rel {
     top: -9px;
 }
 
 .product.pl-15.pr-15 {
     width: 50%;
+}
+
+#vong-tay-content .product.pl-15.pr-15 {
+    width: 33.33%;
 }
 
 .product:hover {
@@ -485,6 +489,12 @@ select:hover {
         font-size: 40px;
         top: 15px;
         right: 35px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #vong-tay-content .product.pl-15.pr-15 {
+        width: 50%;
     }
 }
 
