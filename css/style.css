@@ -839,4 +839,9 @@ input[type=number]::-webkit-outer-spin-button {
     .product.pl-15.pr-15 {
         width: 100%;
     }
+
+    #vong-tay-content .product.pl-15.pr-15 {
+        width: 100%;
+        padding: 0 15px 0 0;
+    }
 }
