@@ -469,21 +469,18 @@
                                     }
 
                                     function updateUrl(productId, size) {
-                                        const newUrl = `${window.location.pathname}?product=${productId}&size=${size}`;
+                                        const newUrl = `${window.location.pathname}?${productId}&size=${size}`;
                                         history.pushState({}, '', newUrl);
                                     }
 
-
-
                                     window.onload = function () {
                                         const urlParams = new URLSearchParams(window.location.search);
-                                        const productId = urlParams.get('product');
                                         const size = urlParams.get('size');
+                                        const query = window.location.search;
 
-                                        if (productId === 'chuoi-rudraksha') {
-                                            showContent(productId);
+                                        if (query.includes('?chuoi-rudraksha')) {
+                                            showContent('chuoi-rudraksha');
 
-                                            // If a size is specified, activate the matching one
                                             switch (size) {
                                                 case '5':
                                                     changePrice5();
@@ -502,7 +499,6 @@
                                                     currentSlide(5, 0);
                                                     break;
                                                 default:
-                                                    // Default to 8mm (size-btn4)
                                                     changePrice8();
                                                     currentSlide(5, 0);
                                                     break;
