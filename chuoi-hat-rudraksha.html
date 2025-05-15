@@ -396,8 +396,9 @@
                                     <button type="button" class="pos-rel size-btn mr-10" id="size-btn3"
                                         onclick="changePrice7(); currentSlide(4, 0); updateUrl('chuoi-rudraksha', '7')">7mm</button>
 
-                                    <button type="button" class="pos-rel size-btn mr-10" id="size-btn4"
+                                    <button type="button" class="pos-rel size-btn mr-10 active" id="size-btn4"
                                         onclick="changePrice8(); currentSlide(5, 0); updateUrl('chuoi-rudraksha', '8')">8mm</button>
+
                                 </div>
                                 <script>
                                     let newPrice = document.getElementById('new-price');
@@ -472,6 +473,8 @@
                                         history.pushState({}, '', newUrl);
                                     }
 
+
+
                                     window.onload = function () {
                                         const urlParams = new URLSearchParams(window.location.search);
                                         const productId = urlParams.get('product');
@@ -480,6 +483,7 @@
                                         if (productId === 'chuoi-rudraksha') {
                                             showContent(productId);
 
+                                            // If a size is specified, activate the matching one
                                             switch (size) {
                                                 case '5':
                                                     changePrice5();
@@ -497,10 +501,14 @@
                                                     changePrice8();
                                                     currentSlide(5, 0);
                                                     break;
+                                                default:
+                                                    // Default to 8mm (size-btn4)
+                                                    changePrice8();
+                                                    currentSlide(5, 0);
+                                                    break;
                                             }
                                         }
                                     };
-
                                 </script>
                             </div>
                             <div class="w-50">
