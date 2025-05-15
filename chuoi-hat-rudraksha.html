@@ -387,13 +387,17 @@
                                 <p class="pl-15 mb-5 mt-0">Kích thước: </p>
                                 <div class="d-flex pl-15 align-items-center flex-wrap">
                                     <button type="button" class="pos-rel size-btn mr-10" id="size-btn1"
-                                        onclick="changePrice5(),currentSlide(2, 0)">5mm</button>
+                                        onclick="changePrice5(); currentSlide(2, 0); updateUrl('chuoi-rudraksha', '5')">5mm</button>
+
+
                                     <button type="button" class="pos-rel size-btn mr-10" id="size-btn2"
-                                        onclick="changePrice6(),currentSlide(3, 0)">6mm</button>
+                                        onclick="changePrice6(); currentSlide(3, 0); updateUrl('chuoi-rudraksha', '6')">6mm</button>
+
                                     <button type="button" class="pos-rel size-btn mr-10" id="size-btn3"
-                                        onclick="changePrice7(),currentSlide(4, 0)">7mm</button>
-                                    <button type="button" class="pos-rel size-btn mr-10 active" id="size-btn4"
-                                        onclick="changePrice8(),currentSlide(5, 0)">8mm</button>
+                                        onclick="changePrice7(); currentSlide(4, 0); updateUrl('chuoi-rudraksha', '7')">7mm</button>
+
+                                    <button type="button" class="pos-rel size-btn mr-10" id="size-btn4"
+                                        onclick="changePrice8(); currentSlide(5, 0); updateUrl('chuoi-rudraksha', '8')">8mm</button>
                                 </div>
                                 <script>
                                     let newPrice = document.getElementById('new-price');
@@ -462,6 +466,41 @@
                                         sizeBtn4.classList.add("active");
 
                                     }
+
+                                    function updateUrl(productId, size) {
+                                        const newUrl = `${window.location.pathname}?product=${productId}&size=${size}`;
+                                        history.pushState({}, '', newUrl);
+                                    }
+
+                                    window.onload = function () {
+                                        const urlParams = new URLSearchParams(window.location.search);
+                                        const productId = urlParams.get('product');
+                                        const size = urlParams.get('size');
+
+                                        if (productId === 'chuoi-rudraksha') {
+                                            showContent(productId);
+
+                                            switch (size) {
+                                                case '5':
+                                                    changePrice5();
+                                                    currentSlide(2, 0);
+                                                    break;
+                                                case '6':
+                                                    changePrice6();
+                                                    currentSlide(3, 0);
+                                                    break;
+                                                case '7':
+                                                    changePrice7();
+                                                    currentSlide(4, 0);
+                                                    break;
+                                                case '8':
+                                                    changePrice8();
+                                                    currentSlide(5, 0);
+                                                    break;
+                                            }
+                                        }
+                                    };
+
                                 </script>
                             </div>
                             <div class="w-50">
@@ -940,14 +979,16 @@
                                     <b>nữ tính và nam tính</b>. Hai thuộc tính này không liên quan đến giới tính mà thể
                                     hiện sự cân bằng cần thiết giữa <b>mãnh liệt</b> và <b>ôn nhu</b> trong con người.
                                     Khi trạng thái cân bằng này được duy trì, cuộc sống sẽ trở nên trọn vẹn và dễ dàng
-                                    hơn.</p>
+                                    hơn.
+                                </p>
                                 <p>Theo Sadhguru:<br>“Trí tuệ, khả năng và năng lực của bạn sẽ được thể hiện đầy đủ chỉ
                                     khi bạn đạt được sự cân bằng trong chính mình.”</p>
                                 <p><b>Rudraksha Gauri-Shankar</b>, một loại Kim Cang sinh đôi quý hiếm, chính là siêu
                                     phẩm dành cho những ai đang tìm kiếm sự cân bằng nội tại. Với khả năng hỗ trợ điều
                                     hòa hai dòng năng lượng chính trong cơ thể – <b>Ida</b> (nữ tính, ôn nhu) và
                                     <b>Pingala</b> (nam tính, mãnh liệt), sản phẩm này đã được sử dụng từ thời cổ đại để
-                                    thúc đẩy sự phát triển tâm linh và ổn định năng lượng.</p>
+                                    thúc đẩy sự phát triển tâm linh và ổn định năng lượng.
+                                </p>
                                 <p class="font-15"><b>Sự Hài Hòa Giữa Nam Tính Và Nữ Tính</b></p>
                                 <p>Trong mỗi con người, hai dòng năng lượng này đều tồn tại:</p>
                                 <ul>
