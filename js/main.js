@@ -54,7 +54,7 @@ document.getElementById('subNav').addEventListener('click', function (event) {
         window.scrollTo({ top: targetOffset, behavior: 'smooth' });
     }
 });
-  
+
 
 // turn off subNav onclick
 var closeModalLinks = document.querySelectorAll('#subNav .overlay-content a');
@@ -88,23 +88,90 @@ for (var i = 0; i < closeMainModalLinks.length; i++) {
 // show zalo and messenger onclick phone
 var contact = document.getElementById('contact');
 var zaloMess = document.getElementById('zalo-mess')
-contact.onclick = function() {
+contact.onclick = function () {
     zaloMess.classList.toggle("show");
 }
 
 // show drop down menu onclick
 var dropDownButton = document.querySelectorAll(".drop-down-button");
 dropDownButton.forEach(function (button) {
-    button.onclick = function() {
+    button.onclick = function () {
         button.classList.toggle("arrow-up");
     };
 });
 
 // open main nav and subnav
 function showContent(id) {
+    // Hide all product popups first
+    document.querySelectorAll('.product-details').forEach(el => el.style.display = 'none');
+
+    // Show the selected popup
     document.getElementById(id).style.display = "block";
+
+    // Update the URL
+    const newUrl = `${window.location.pathname}?${id}`;
+    history.pushState({}, '', newUrl);
 }
 
 function hideContent(id) {
     document.getElementById(id).style.display = "none";
+
+    // Remove query from URL when popup closes
+    const cleanUrl = window.location.pathname;
+    history.pushState({}, '', cleanUrl);
 }
+
+// Auto open popup based on URL
+window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const size = urlParams.get('size');
+    const query = window.location.search;
+    const productId = query ? query.slice(1).split('&')[0] : null;
+
+    if (productId) {
+        const popup = document.getElementById(productId);
+        if (popup && popup.classList.contains('product-details')) {
+            showContent(productId);
+
+            // Only run size selection logic if product is "chuoi-rudraksha"
+            if (productId === 'chuoi-rudraksha') {
+                switch (size) {
+                    case '5':
+                        changePrice5();
+                        currentSlide(2, 0);
+                        break;
+                    case '6':
+                        changePrice6();
+                        currentSlide(3, 0);
+                        break;
+                    case '7':
+                        changePrice7();
+                        currentSlide(4, 0);
+                        break;
+                    case '8':
+                        changePrice8();
+                        currentSlide(5, 0);
+                        break;
+                    default:
+                        changePrice8();
+                        currentSlide(5, 0);
+                        break;
+                }
+            }
+        }
+    }
+};
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === "Escape") {
+        // Find any open product-details popup
+        const openPopup = document.querySelector('.product-details[style*="display: block"]');
+        if (openPopup) {
+            openPopup.style.display = 'none';
+
+            // Clear the URL
+            const cleanUrl = window.location.pathname;
+            history.pushState({}, '', cleanUrl);
+        }
+    }
+});
